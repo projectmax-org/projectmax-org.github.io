@@ -24,7 +24,11 @@ CNAME                 the custom domain GitHub Pages serves this on
    | A | A | 185.199.110.153 |
    | A | @ | 185.199.111.153 |
    | AAAA | @ | 2606:50c0:8000::153, 2606:50c0:8001::153, 2606:50c0:8002::153, 2606:50c0:8003::153 |
-   | CNAME | www | `<github-user-or-org>.github.io` |
+   | CNAME | www | `projectmax-org.github.io` |
+
+4. **driftwall.org** is a redirect, not a second site. At its registrar, forward the whole domain
+   (apex and `www`, permanent 301, HTTPS) to `https://projectmax.app/driftwall`. Most registrars
+   offer this under "forwarding" or "redirect"; nothing needs to be deployed for it.
 
 ## Editing
 
