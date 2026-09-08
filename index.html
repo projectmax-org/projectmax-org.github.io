@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project Max</title>
+  <meta name="description" content="Project Max makes small, careful desktop apps for Windows. Free and open source. Driftwall, a wallpaper switcher, is the first.">
+  <meta property="og:title" content="Project Max">
+  <meta property="og:description" content="Small, careful desktop apps for Windows. Free and open source.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/assets/driftwall-icon.png">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/favicon.png" sizes="48x48">
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="/">
+      <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
+        <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6d5ef6"/><stop offset="1" stop-color="#b84bf0"/></linearGradient></defs>
+        <rect width="64" height="64" rx="16" fill="url(#g)"/>
+        <path d="M16 51 L32 16 L48 51 Z" fill="#fff"/>
+      </svg>
+      Project Max
+    </a>
+    <nav class="nav">
+      <a href="/#apps">Apps</a>
+      <a href="/driftwall/">Driftwall</a>
+      <a href="https://github.com/projectmax-org">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container">
+      <div class="eyebrow">Open source, for Windows</div>
+      <h1>Small apps that stay out of your way.</h1>
+      <p class="lede">
+        Project Max builds desktop software the way it should feel: one job, done properly, no
+        account, no telemetry, and nothing running when it does not need to. Everything is free and
+        the source is public.
+      </p>
+      <div class="actions">
+        <a class="button primary" href="/driftwall/">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H4z"/><path d="M8 21h8M12 16v5"/></svg>
+          Meet Driftwall
+        </a>
+        <a class="button" href="https://github.com/projectmax-org">Source on GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="apps">
+    <div class="container">
+      <p class="section-label">Apps</p>
+      <h2>What we make</h2>
+      <p class="section-intro">One so far, with more to come. Each app is its own repository under the same licence.</p>
+
+      <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));">
+        <a class="app-card" href="/driftwall/">
+          <img src="/assets/driftwall-icon.png" alt="" width="96" height="96">
+          <div>
+            <h3>Driftwall</h3>
+            <p>A wallpaper switcher that pulls photos from the web and your own folders, renders every
+               monitor at its native resolution, and pauses while you game.</p>
+            <div class="tags"><span class="tag">Windows 10 / 11</span><span class="tag">MIT</span><span class="tag">v1.0</span></div>
+          </div>
+        </a>
+
+        <div class="app-card soon">
+          <div class="placeholder">…</div>
+          <div>
+            <h3>Next</h3>
+            <p>Another small tool is in the works. It will appear here when it is worth your time.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="principles">
+    <div class="container">
+      <p class="section-label">How we build</p>
+      <h2>A few rules we do not break</h2>
+      <div class="grid">
+        <div class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+          <h3>Idle means idle</h3>
+          <p>No polling, no background chatter. An app that has nothing to do uses nothing.</p>
+        </div>
+        <div class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8"/></svg></div>
+          <h3>Native, not wrapped</h3>
+          <p>Real Windows apps that follow your theme, your DPI and your notification area.</p>
+        </div>
+        <div class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/></svg></div>
+          <h3>Nothing leaves your machine</h3>
+          <p>No accounts, no analytics. Keys you enter are encrypted for your Windows user alone.</p>
+        </div>
+        <div class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg></div>
+          <h3>Open source, MIT</h3>
+          <p>Read it, build it, change it. Bugs and pull requests are welcome on GitHub.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div>© 2026 Project Max. Code under the MIT licence.</div>
+    <div><a href="https://github.com/projectmax-org">GitHub</a> · <a href="/driftwall/">Driftwall</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
