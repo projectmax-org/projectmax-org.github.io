@@ -3,12 +3,38 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Driftwall</title>
-  <meta name="description" content="Driftwall is a free, open-source wallpaper switcher for Windows. Photos from Wallhaven, Bing, Unsplash, NASA and your own folders, on a schedule, on every monitor at native resolution.">
-  <meta property="og:title" content="Driftwall">
-  <meta property="og:description" content="A wallpaper switcher for Windows that stays out of your way. Free and open source.">
+  <title>Driftwall · Free, open-source wallpaper changer for Windows</title>
+  <meta name="description" content="Driftwall is a free, open-source wallpaper changer for Windows 10 and 11. Photos from Wallhaven, Bing, Unsplash, Pexels, NASA and your own folders, on a schedule, sharp on every monitor at its native resolution.">
+  <link rel="canonical" href="https://projectmax-org.github.io/driftwall/">
+  <meta property="og:site_name" content="Project Max">
+  <meta property="og:title" content="Driftwall: a free wallpaper changer for Windows">
+  <meta property="og:description" content="Photos from the web and your own folders, on a schedule, sharp on every monitor. Free and open source.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="/assets/driftwall-icon.png">
+  <meta property="og:url" content="https://projectmax-org.github.io/driftwall/">
+  <meta property="og:image" content="https://projectmax-org.github.io/assets/social/driftwall.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Driftwall, a wallpaper changer for Windows, next to its settings window">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Driftwall",
+    "description": "A free, open-source wallpaper changer for Windows 10 and 11 that pulls photos from the web and your own folders on a schedule, rendered at each monitor's native resolution.",
+    "url": "https://projectmax-org.github.io/driftwall/",
+    "applicationCategory": "DesktopEnhancementApplication",
+    "operatingSystem": "Windows 10, Windows 11",
+    "downloadUrl": "https://github.com/projectmax-org/driftwall/releases/latest",
+    "license": "https://opensource.org/licenses/MIT",
+    "isAccessibleForFree": true,
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "image": "https://projectmax-org.github.io/assets/driftwall-icon.png",
+    "screenshot": "https://projectmax-org.github.io/assets/screens/settings.png",
+    "author": { "@type": "Organization", "name": "Project Max", "url": "https://projectmax-org.github.io/" },
+    "sameAs": ["https://github.com/projectmax-org/driftwall"]
+  }
+  </script>
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/assets/favicon.png" sizes="48x48">
   <link rel="stylesheet" href="/assets/site.css">
@@ -77,7 +103,7 @@
         <div class="card">
           <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="12" height="9" rx="1.5"/><rect x="15" y="3" width="7" height="13" rx="1.5"/><path d="M8 18v3M18 19v2"/></svg></div>
           <h3>Real multi-monitor</h3>
-          <p>Every display gets its own photo rendered at its exact pixel size. A 4K screen is never fed a 1080p file, and portrait displays get portrait photos. Mixed DPI just works.</p>
+          <p>Every display gets its own render at its exact pixel size, so a 4K screen next to a 1080p one stays sharp. Photos too small for a screen are skipped, and portrait displays get portrait photos.</p>
         </div>
         <div class="card">
           <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
@@ -120,6 +146,7 @@
         <li><span><strong>No polling.</strong> One timer, armed once per change. Between changes the app does nothing at all: about 35 MB resident and zero CPU.</span></li>
         <li><span><strong>Pauses for games.</strong> Fullscreen apps, presentations and exclusive Direct3D are detected when the timer fires and the change waits. Optional pauses for battery and metered connections.</span></li>
         <li><span><strong>Decodes only what it needs.</strong> A 45-megapixel photo bound for a 1080p monitor is decoded at about 2 megapixels. Full-size decoding never happens.</span></li>
+        <li><span><strong>Nothing lost on the way to the screen.</strong> Each photo is resampled once with a Lanczos filter and handed to Windows as a PNG, which it shows untouched. Windows re-compresses JPEG wallpapers before showing them.</span></li>
         <li><span><strong>Gives memory back.</strong> Closing the window compacts the heap and returns the working set to Windows.</span></li>
         <li><span><strong>No GPU use.</strong> Composition runs in software on a low-priority thread, so it never competes with a game.</span></li>
       </ul>
@@ -133,7 +160,7 @@
       <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
         <div class="card">
           <h3>Installer</h3>
-          <p>Download <code>DriftwallSetup-1.0.0.exe</code> from the latest release and run it. It installs for your user only, no administrator prompt, adds a Start menu entry and, if you like, starts Driftwall quietly when you sign in. Uninstall from Settings › Apps; your collections stay unless you say otherwise.</p>
+          <p>Download <code>DriftwallSetup-x.y.z.exe</code> from the latest release and run it. It installs for your user only, no administrator prompt, adds a Start menu entry and, if you like, starts Driftwall quietly when you sign in. Uninstall from Settings › Apps; your collections stay unless you say otherwise.</p>
         </div>
         <div class="card">
           <h3>Portable</h3>
