@@ -20,8 +20,11 @@ tools/serve.ps1       local preview on http://localhost:8080 (no dependencies)
 
 ## Moving to a custom domain later
 
-Nothing in the pages depends on the address: every link is relative to the site root, so the same
-files serve either name.
+Links between pages are relative to the site root, but the address itself is written out in full
+where search engines and link previews need it: the canonical links, the Open Graph tags and the
+structured data in each page, `sitemap.xml` and `robots.txt`. Moving to another address means
+replacing `https://projectmax-org.github.io/` with the new origin in `index.html`,
+`driftwall/index.html`, `sitemap.xml` and `robots.txt` before the new domain goes live.
 
 1. Register the domain (`projectmax.app` was free to register as of September 2026).
 2. Add a file named `CNAME` at the repository root containing only the domain, commit and push.
@@ -41,7 +44,7 @@ files serve either name.
 5. `driftwall.org`, if bought, is a redirect rather than a second site: at its registrar, forward
    the whole domain (apex and `www`, permanent 301, HTTPS) to the Driftwall page. Nothing needs to
    be deployed for it.
-6. Update the addresses the app and installer carry (`WebsiteUrl` in the Driftwall settings view
+6. Search both repositories for `projectmax-org.github.io` before shipping: besides the pages, it appears in `AppPublisherURL` in `installer/Driftwall.iss`, the `/du` signing URL in `installer/build-installer.ps1`, `PackageProjectUrl` in `Driftwall.csproj` and the winget manifests. In particular, update the addresses the app and installer carry (`WebsiteUrl` in the Driftwall settings view
    model, `AppUrl` in the installer script, the user agents in `Net.cs` and `RedditSource.cs`) and
    the links in the Driftwall README, then ship a new release.
 

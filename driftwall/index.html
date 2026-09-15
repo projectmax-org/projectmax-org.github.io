@@ -80,7 +80,7 @@
         <p class="meta">Free · MIT licence · Windows 10 and 11, 64-bit · no account needed</p>
       </div>
       <div class="shot">
-        <img src="/assets/screens/settings.png" alt="Driftwall's settings page, dark theme, showing the sources and rotation options" width="1180" height="760">
+        <img src="/assets/screens/settings.png" alt="Driftwall's settings page, dark theme, showing the rotation and appearance options" width="1180" height="760">
       </div>
     </div>
   </section>
@@ -145,7 +145,7 @@
       <ul class="checks">
         <li><span><strong>No polling.</strong> One timer, armed once per change. Between changes the app does nothing at all: about 35 MB resident and zero CPU.</span></li>
         <li><span><strong>Pauses for games.</strong> Fullscreen apps, presentations and exclusive Direct3D are detected when the timer fires and the change waits. Optional pauses for battery and metered connections.</span></li>
-        <li><span><strong>Decodes only what it needs.</strong> A 45-megapixel photo bound for a 1080p monitor is decoded at about 2 megapixels. Full-size decoding never happens.</span></li>
+        <li><span><strong>Decodes only what it needs.</strong> For Fill, Fit and Stretch, a 45-megapixel photo bound for a 1080p monitor is decoded at about 2 megapixels, never at full size.</span></li>
         <li><span><strong>Nothing lost on the way to the screen.</strong> Each photo is resampled once with a Lanczos filter and handed to Windows as a PNG, which it shows untouched. Windows re-compresses JPEG wallpapers before showing them.</span></li>
         <li><span><strong>Gives memory back.</strong> Closing the window compacts the heap and returns the working set to Windows.</span></li>
         <li><span><strong>No GPU use.</strong> Composition runs in software on a low-priority thread, so it never competes with a game.</span></li>
@@ -160,16 +160,16 @@
       <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
         <div class="card">
           <h3>Installer</h3>
-          <p>Download <code>DriftwallSetup-x.y.z.exe</code> from the latest release and run it. It installs for your user only, no administrator prompt, adds a Start menu entry and, if you like, starts Driftwall quietly when you sign in. Uninstall from Settings › Apps; your collections stay unless you say otherwise.</p>
+          <p>Download <code>DriftwallSetup-x.y.z.exe</code> from the latest release and run it. By default it installs for your user only, with no administrator prompt. It adds a Start menu entry and, if you leave the box ticked, starts Driftwall quietly when you sign in. Uninstall from Settings › Apps; your collections stay unless you say otherwise.</p>
         </div>
         <div class="card">
           <h3>Portable</h3>
-          <p>Download <code>Driftwall.exe</code> on its own and put it anywhere. It is self-contained, needs no .NET runtime installed, and keeps its settings in <code>%LOCALAPPDATA%\Driftwall</code>.</p>
+          <p>Download <code>Driftwall.exe</code> on its own and put it anywhere. It is self-contained, needs no .NET runtime installed, and keeps its settings in <code>%LOCALAPPDATA%\Driftwall</code>. It starts with Windows by default; switch that off in Settings.</p>
         </div>
       </div>
       <p class="note" style="margin-top: 20px;">
         <strong>It keeps itself current.</strong> Driftwall checks for a new release once a day and, unless you
-        switch that off in Settings, installs it quietly while its window is closed. Downloads are checked against
+        switch that off in Settings, installs it quietly while its window is closed. A copy installed for all users only tells you a version is waiting, because replacing it needs administrator approval. Downloads are checked against
         the checksums published with each release.
       </p>
       <p class="note" style="margin-top: 12px;">
@@ -184,7 +184,7 @@
     <div class="container">
       <p class="section-label">Sources</p>
       <h2>Where the photos come from</h2>
-      <p class="section-intro">Wallhaven and Bing work with no setup. The others take a free API key you paste in once; it is stored encrypted for your Windows account and never leaves your PC.</p>
+      <p class="section-intro">Wallhaven, Bing, NASA's picture of the day, RSS feeds and your own folders need no setup. Unsplash, Pixabay and Flickr, and Pexels and Reddit if you switch them on, take a free API key you paste in once; it is stored encrypted for your Windows account and sent only to that provider.</p>
       <div class="table-wrap">
         <table>
           <thead><tr><th>Source</th><th>Key</th><th>Notes</th></tr></thead>
@@ -208,8 +208,8 @@
     <div class="container">
       <p class="section-label">Questions</p>
       <h2>Short answers</h2>
-      <details><summary>Does it need an account or send anything anywhere?</summary><p>No account. The only network traffic is fetching photos from the sources you enabled, plus the attribution ping some providers require when a photo is used.</p></details>
-      <details><summary>Will it slow down my games?</summary><p>No. Changes are deferred while a fullscreen app is running, and the app uses no GPU at all for its own rendering.</p></details>
+      <details><summary>Does it need an account or send anything anywhere?</summary><p>No account and no telemetry. Driftwall fetches photos from the sources you enabled, sends the attribution ping some providers require when a photo is used, and checks GitHub once a day for a new release, downloading it when an update is installed.</p></details>
+      <details><summary>Will it slow down my games?</summary><p>No. Changes are deferred while a fullscreen app is running, and wallpapers are composed in software on a low-priority thread, so the GPU is left to the game.</p></details>
       <details><summary>Can I use a photo I like as my permanent wallpaper?</summary><p>Yes. Pause the rotation from the tray menu, or save the photo to a collection so it survives cache clean-ups and works offline.</p></details>
       <details><summary>What about the licences of the photos?</summary><p>They vary by source. Every photo links to its source page, which is the authoritative word on what you may do with it. The repository's <a href="https://github.com/projectmax-org/driftwall/blob/main/docs/SOURCES.md">SOURCES.md</a> summarises each provider's terms.</p></details>
       <details><summary>Keyboard shortcuts?</summary><p><kbd>Ctrl</kbd> + <kbd>→</kbd> next, <kbd>Ctrl</kbd> + <kbd>←</kbd> previous, <kbd>F5</kbd> re-render, <kbd>Esc</kbd> close to the notification area.</p></details>
